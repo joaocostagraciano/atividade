@@ -1,0 +1,22 @@
+<meta charset="UTF-8" />
+<script>
+    //Problema: Ano Bissexto
+    // Recebe um ano e informa se ele é bissexto ou não.
+
+    // Entrada
+
+    const ano = Number(prompt("Digite um ano:"));
+    // Processamento
+   if (!isNaN(ano)) {
+        if ((ano % 4 === 0 && ano % 100 !== 0) || ano % 400 === 0) {
+            document.write(`${ano} é um ano bissexto.`);
+        } else {
+            document.write(`${ano} não é um ano bissexto.`);
+        }
+    } else {
+        document.write("Ano inválido. Certifique-se de que o valor digitado seja um ano válido.");
+    }
+
+    // Saída
+
+</script>

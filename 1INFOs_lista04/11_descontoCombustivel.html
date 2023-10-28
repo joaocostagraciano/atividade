@@ -1,0 +1,49 @@
+<script>
+    /*
+    //PROBLEMA: DESCONTO COMBUSTÍVEL
+    Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+    Álcool:
+    - até 20 litros, desconto de 3% por litro
+    - acima de 20 litros, desconto de 5% por litro
+
+    Gasolina:
+    - até 20 litros, desconto de 4% por litro
+    - acima de 20 litros, desconto de 6% por litro
+    
+    Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,50 o preço do litro do álcool é R$ 6,10.
+    */
+
+    //ENTRADA
+    let litrosVendidos = Number(prompt("Digite o número de litros vendidos:"));
+    let tipoCombustivel = prompt("Digite o tipo de combustível (A para Álcool, G para Gasolina):").toUpperCase();
+    let precoGasolina = 6.50;
+    let precoAlcool = 6.10;
+
+
+    //PROCESSAMENTO
+    let valorAPagar = 0;
+
+    if (tipoCombustivel === "A") {
+        if (litrosVendidos <= 20) {
+            valorAPagar = litrosVendidos * precoAlcool * 0.97;
+        } else {
+            valorAPagar = litrosVendidos * precoAlcool * 0.95;
+        }
+    } else if (tipoCombustivel === "G") {
+        if (litrosVendidos <= 20) {
+            valorAPagar = litrosVendidos * precoGasolina * 0.96;
+        } else {
+            valorAPagar = litrosVendidos * precoGasolina * 0.94;
+        }
+    } else {
+        document.write("Tipo de combustível inválido. Use A para Álcool ou G para Gasolina.");
+    }
+
+    if (valorAPagar > 0) {
+        document.write(`Valor a pagar: R$ ${valorAPagar.toFixed(2)}`);
+    }
+
+    //SAÍDA
+
+
+</script>

@@ -1,0 +1,33 @@
+<meta charset="UTF-8" />
+<script>
+    //Problema: Aumento de Preço
+    // Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:
+    //- até 280(inclusive): aumento de 20 %
+    //- até 700(inclusive): aumento de 15 %
+    //- até 1500(inclusive): aumento de 10 %
+    //- acima de 1500: aumento de 5 %
+
+    // Entrada
+    const precoProduto = Number(prompt("Digite o preço do produto:"));
+    let aumento = 0;
+    // Processamento
+    if (!isNaN(precoProduto)) {
+        if (precoProduto <= 280) {
+            aumento = precoProduto * 0.2; // Aumento de 20%
+        } else if (precoProduto <= 700) {
+            aumento = precoProduto * 0.15; // Aumento de 15%
+        } else if (precoProduto <= 1500) {
+            aumento = precoProduto * 0.1; // Aumento de 10%
+        } else {
+            aumento = precoProduto * 0.05; // Aumento de 5%
+        }
+
+        const novoPreco = precoProduto + aumento;
+        document.write(`O preço do produto com o aumento é R$ ${novoPreco.toFixed(2)}`);
+    } else {
+        document.write("Valor inválido. Certifique-se de que o preço digitado seja um número válido.");
+    }
+
+    // Saída
+
+</script>
